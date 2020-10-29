@@ -1,5 +1,5 @@
 public class Training {
-    public void train(Character firstChar, Character secondChar){
+    public void train(Unit firstChar, Unit secondChar){
         if(firstChar.getRarity() == "N" && firstChar.getLevel() == 20 && firstChar.getSuperATKLevel()==10)
         {
             System.out.println("The card is already maxed out");

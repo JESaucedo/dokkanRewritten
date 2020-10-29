@@ -27,7 +27,7 @@ public class Main {
                     System.out.println("You have no characters to display");
                 else {
                     System.out.println("Here is your character list");
-                    for (Character e : currentPlayer.myCharacterList) {
+                    for (Unit e : currentPlayer.myCharacterList) {
 
                         System.out.println(i + ". [" + e.subCharacterName + "] " + e.characterName);
                         i++;
@@ -44,7 +44,7 @@ public class Main {
                         while(keepLookingAtCards)
                         {
                             i = 1;
-                            for (Character e : currentPlayer.myCharacterList) {
+                            for (Unit e : currentPlayer.myCharacterList) {
                                 //System.out.println("Here is your character list");
                                 System.out.println(i + ". [" + e.subCharacterName + "] " + e.characterName);
                                 i++;
@@ -68,17 +68,17 @@ public class Main {
                 case 3:i=1;
                 int firstCardChoice = 0;
                     System.out.println("What character would you like to train");
-                    for (Character e : currentPlayer.myCharacterList) {
+                    for (Unit e : currentPlayer.myCharacterList) {
                         //System.out.println("Here is your character list");
                         System.out.println(i + ". [" + e.subCharacterName + "] " + e.characterName);
                         i++;
                     }
 
                     firstCardChoice = userInput.nextInt() - 1;
-                    Character mainCard = currentPlayer.myCharacterList.get(firstCardChoice);
+                    Unit mainCard = currentPlayer.myCharacterList.get(firstCardChoice);
                     System.out.println("What character would you like to use for training");
                     i=1;
-                    for (Character e : currentPlayer.myCharacterList) {
+                    for (Unit e : currentPlayer.myCharacterList) {
                         //System.out.println("Here is your character list");
                         if(i==firstCardChoice+1)
                         {
@@ -92,7 +92,7 @@ public class Main {
                         }
                     }
                     userChoice = userInput.nextInt() - 1;
-                    Character burnCard = currentPlayer.myCharacterList.get(userChoice);
+                    Unit burnCard = currentPlayer.myCharacterList.get(userChoice);
                     if(userChoice == firstCardChoice)
                     {
                         System.out.println("You can't pick the same card");

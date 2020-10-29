@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class EnemyCharacter extends Character{
+public class EnemyCharacter extends Unit{
     ArrayList<String> requiredMedals = new ArrayList<>();
     ArrayList<String> links = new ArrayList<>();
     ArrayList<String> categories = new ArrayList<>();
-    public Character enemy = new Character("Red Ribbon Soldier","Army of Infamy"
+    public Unit enemy = new Unit("Red Ribbon Soldier","Army of Infamy"
             , "TEQ",401, 280,224,2639,1858,2101,"N",1
             ,1,4,true,false,false
             ,requiredMedals,links,categories,false,false);

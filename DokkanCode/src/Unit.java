@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Character {
+public class Unit {
     String characterName;
     String subCharacterName;
     String type;
@@ -27,7 +27,7 @@ public class Character {
     boolean hasPassiveSkill;
     boolean hasLeaderSkill;
 
-    public Character(String characterName, String subCharacterName, String type, int hp, int atk, int def, int maxHP, int maxATK, int maxDEF, String rarity, int level, int superATKLevel, int teamCost, boolean canBeAwakened, boolean isAwakened, boolean canBeDokkanAwakened, ArrayList<String> requiredMedals, ArrayList<String> links, ArrayList<String> categories, boolean hasPassiveSkill, boolean hasLeaderSkill) {
+    public Unit(String characterName, String subCharacterName, String type, int hp, int atk, int def, int maxHP, int maxATK, int maxDEF, String rarity, int level, int superATKLevel, int teamCost, boolean canBeAwakened, boolean isAwakened, boolean canBeDokkanAwakened, ArrayList<String> requiredMedals, ArrayList<String> links, ArrayList<String> categories, boolean hasPassiveSkill, boolean hasLeaderSkill) {
         this.characterName = characterName;
         this.subCharacterName = subCharacterName;
         this.type = type;

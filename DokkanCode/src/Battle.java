@@ -1,5 +1,5 @@
 public class Battle {
-    public void attacking(Character player, Character enemy, Player current)
+    public void attacking(Unit player, Unit enemy, Player current)
     {
         int playerHP, playerATK, playerDEF, enemyHP, enemyATK, enemyDEF = 0;
         playerHP = player.getHP();

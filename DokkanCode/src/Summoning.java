@@ -1,4 +1,3 @@
-import java.math.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ public class Summoning {
     {
         //int i = 0
         for (Object e:summoningCharacters) {
-            Character checkChar = (Character)e;
+            Unit checkChar = (Unit)e;
             if (checkChar.rarity == "N")
             {
                 normalCharacters.add(checkChar);
@@ -34,10 +33,14 @@ public class Summoning {
 
     }
 
-    public Character makeSummonNumber()
+    public Unit makeSummonNumber()
     {
         int range = 100;
         int summonNumber = (int) (Math.random() * range);
+
+
+        //testing number
+        //summonNumber = 99;
         Scanner pausing = new Scanner(System.in);
         if (summonNumber<22)
         {
@@ -45,7 +48,7 @@ public class Summoning {
             range = normalCharacters.size();
             summonNumber = (int) (Math.random() * range);
 
-            Character summonedCharacter = (Character) normalCharacters.get(summonNumber);
+            Unit summonedCharacter = (Unit) normalCharacters.get(summonNumber);
             summonedCharacter.setMaxLevel(20);
             summonedCharacter.calculateHPIncrease();
             summonedCharacter.calculateATKIncrease();
@@ -60,7 +63,7 @@ public class Summoning {
             range = rareCharacters.size();
             summonNumber = (int) (Math.random() * range);
 
-            Character summonedCharacter = (Character) rareCharacters.get(summonNumber);
+            Unit summonedCharacter = (Unit) rareCharacters.get(summonNumber);
             summonedCharacter.setMaxLevel(40);
             summonedCharacter.calculateHPIncrease();
             summonedCharacter.calculateATKIncrease();
@@ -75,7 +78,7 @@ public class Summoning {
             range = superRareCharacters.size();
             summonNumber = (int) (Math.random() * range);
 
-            Character summonedCharacter = (Character) superRareCharacters.get(summonNumber);
+            Unit summonedCharacter = (Unit) superRareCharacters.get(summonNumber);
             summonedCharacter.setMaxLevel(60);
             summonedCharacter.calculateHPIncrease();
             summonedCharacter.calculateATKIncrease();
@@ -89,8 +92,10 @@ public class Summoning {
             //get SuperSuperRare
             range = superSuperRareCharacters.size();
             summonNumber = (int) (Math.random() * range);
+            System.out.println(summonNumber);
+            //System.out.println(superSuperRareCharacters);
 
-            Character summonedCharacter = (Character) superSuperRareCharacters.get(summonNumber);
+            Unit summonedCharacter = (Unit) superSuperRareCharacters.get(summonNumber);
             summonedCharacter.setMaxLevel(80);
             summonedCharacter.calculateHPIncrease();
             summonedCharacter.calculateATKIncrease();
